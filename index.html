@@ -64,7 +64,7 @@
                 </button>
             </div>
 
-            <!-- 幣別選擇 (修復 Block 問題：改為 Grid 排版) -->
+            <!-- 幣別選擇 -->
             <div class="mb-6">
                 <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 ml-1">使用幣別 (Currency)</label>
                 <div class="grid grid-cols-4 gap-2">
@@ -98,12 +98,12 @@
                     </div>
                 </div>
 
-                <!-- 金額輸入 -->
+                <!-- 金額輸入 (已加入 step="any" 允許小數) -->
                 <div class="input-group">
                     <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 ml-1">金額 (<span id="currencyLabel">MOP</span>)</label>
                     <div class="relative">
                         <div class="absolute left-4 top-1/2 -translate-y-1/2 bg-indigo-100 text-indigo-600 px-2 py-1 flex items-center justify-center rounded-lg font-bold text-[10px]" id="currencySymbol">MOP</div>
-                        <input type="number" id="amount" inputmode="decimal" required placeholder="0.00" oninput="updateConvertedAmount()"
+                        <input type="number" id="amount" step="any" inputmode="decimal" required placeholder="0.00" oninput="updateConvertedAmount()"
                                class="w-full p-4 pl-16 bg-gray-50 border-2 border-transparent focus:border-indigo-500 rounded-2xl outline-none transition-all font-extrabold text-xl text-gray-800">
                     </div>
                     <p id="conversionHint" class="mt-2 text-xs text-indigo-500 font-bold ml-1 hidden"></p>
